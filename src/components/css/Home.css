@@ -14,3 +14,17 @@
     margin-bottom: 20px;
     text-align: center;
 }
+
+@media (max-width: 768px) {
+    .main-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        place-items: center;
+        padding: 3% 5%;
+        justify-items: center;
+    }
+
+    .card{
+        padding: 5% 10%;
+    }
+}
