@@ -1,5 +1,8 @@
 import React from "react";
-import './css/HourlySalary.css'
+import "./css/HourlySalary.css";
+import "./css/Home.css";
+
+import { Link } from "react-router-dom";
 
 const HourlySalary = () => {
   function calculateHourlySalary() {
@@ -16,20 +19,27 @@ const HourlySalary = () => {
   }
   return (
     <>
-      <div className="salary">
-        <p>Enter the following information to work out your hourly salary:</p>
+      <div className="main-container">
+        <div className="card">
+          <p>Enter the following information to work out your hourly salary:</p>
+          <div className="details">
+            <label for="text_hours">Hours Per Week:</label>
+            <input type="text" name="weekly_hours" id="text_weekly_hours" />
+            <br />
 
-        <label for="text_hours">Hours Per Week:</label>
-        <input type="text" name="weekly_hours" id="text_weekly_hours" />
-        <br />
+            <label for="text_annual_wage">Annual Wage:</label>
+            <input type="text" name="annual_wage" id="text_annual_wage" />
+            
+            <br />
+            </div>
+          <button className="button" onClick={calculateHourlySalary}>
+            Calculate
+          </button>
+          <hr />
+          <p id="hourly_results"></p>
+        <p><Link to="/" className="link">Calculate annual salary</Link></p>
 
-        <label for="text_annual_wage">Annual Wage:</label>
-        <input type="text" name="annual_wage" id="text_annual_wage" />
-        <br />
-
-        <button className="button" onClick={calculateHourlySalary}>Calculate</button>
-        <hr />
-        <p id="hourly_results"></p>
+        </div>
       </div>
     </>
   );

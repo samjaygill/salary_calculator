@@ -1,5 +1,6 @@
 import React from "react";
 import './css/HourlySalary.css'
+import { Link } from "react-router-dom";
 
 const AnnualCalculator = () => {
   function calculateAnnualSalary() {
@@ -13,20 +14,26 @@ const AnnualCalculator = () => {
   }
   return (
     <>
-      <div>
+      <div className="main-container">
+      <div className="card">
         <p>Enter the following information to work out your annual salary:</p>
+        <div className="details">
         <label for="text_hours">Hours Per Week:</label>
         <input type="text" name="hours" id="text_hours" />
 
         <br />
         <label for="text_wage">Hourly Wage:</label>
         <input type="text" name="wage" id="text_wage" />
-
+        
         <br />
+        </div>
         <button className="button" onClick={calculateAnnualSalary}>Calculate</button>
         <hr/>
         <p id="results"></p>
+        <p><Link to="/hourly" className="link">Calculate hourly salary</Link></p>
       </div>
+      </div>
+
     </>
   );
 };

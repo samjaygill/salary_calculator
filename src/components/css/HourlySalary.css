@@ -1,9 +1,19 @@
 
-.salary label {
-    margin-bottom: 10px !important; 
-  }
-
 .button {
   margin: 5px;
   margin-top: 10px;
+}
+
+.details{
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.link{
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+.link:hover{
+  text-decoration: underline;
 }

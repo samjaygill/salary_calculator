@@ -3,13 +3,13 @@
 }
 
 .header-image{
-    height: 200px;
+    height: 250px;
     padding: 0px;
-    margin-top: 20px;
+    margin: 20px 0px;
 }
 
 @media (max-width: 768px) {
     .header-image{
-        height:100px;
+        height:115px;
     }
 }
